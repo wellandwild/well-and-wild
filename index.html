@@ -251,6 +251,42 @@ footer p{font-family:'Tenor Sans',sans-serif;font-size:.58rem;color:rgba(246,244
   .atext{padding:3rem 1.5rem}
   .comm{padding:5.5rem 1.5rem}
 }
+
+/* ── HAMBURGER (mobile) ── */
+.hbtn{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:601}
+.hbtn span{display:block;width:22px;height:1.5px;transition:transform .35s var(--ease),opacity .3s}
+nav.nb .hbtn span{background:var(--bei)}
+nav.lb .hbtn span{background:var(--brn)}
+.hbtn.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hbtn.open span:nth-child(2){opacity:0}
+.hbtn.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;top:0;left:0;right:0;bottom:0;z-index:599;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2.5rem;
+  background:var(--brn);
+  opacity:0;pointer-events:none;
+  transition:opacity .4s var(--ease);
+}
+.mobile-menu.open{opacity:1;pointer-events:all}
+.mm-link{
+  font-family:'Tenor Sans',sans-serif;font-size:1.4rem;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(246,244,240,.7);text-decoration:none;
+  transition:color .3s;
+}
+.mm-link:hover{color:var(--bei)}
+.mm-cta{
+  margin-top:1rem;padding:.9rem 3rem;
+  border:.5px solid rgba(246,244,240,.45);
+  font-size:.75rem;color:var(--bei)!important;
+}
+.mm-cta:hover{background:rgba(246,244,240,.08)}
+
+@media(max-width:768px){
+  .hbtn{display:flex}
+  nav ul{display:none}
+}
+
 </style>
 </head>
 <body>
@@ -268,7 +304,17 @@ footer p{font-family:'Tenor Sans',sans-serif;font-size:.58rem;color:rgba(246,244
     <li><a href="#stories">Stories</a></li>
     <li><a href="https://buy.stripe.com/6oU28r3gK9kC2idfxF57W01" target="_blank" class="ncta">Book Now</a></li>
   </ul>
+  <button class="hbtn" id="hbtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mm-link">Our Story</a>
+  <a href="#why" class="mm-link">Why Us</a>
+  <a href="#experiences" class="mm-link">Experiences</a>
+  <a href="#stories" class="mm-link">Stories</a>
+  <a href="https://buy.stripe.com/6oU28r3gK9kC2idfxF57W01" target="_blank" class="mm-link mm-cta">Book Now</a>
+</div>
 
 <!-- ═══ HERO — dark (BRN) ═══ -->
 <section class="hero sbrn" id="home" data-theme="dark">
@@ -456,6 +502,24 @@ footer p{font-family:'Tenor Sans',sans-serif;font-size:.58rem;color:rgba(246,244
     if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}
   }),{threshold:.09});
   document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+
+
+  // ── Hamburger menu
+  const hbtn=document.getElementById('hbtn');
+  const mMenu=document.getElementById('mobileMenu');
+  hbtn.addEventListener('click',()=>{
+    hbtn.classList.toggle('open');
+    mMenu.classList.toggle('open');
+    document.body.style.overflow=mMenu.classList.contains('open')?'hidden':'';
+  });
+  // Close on link click
+  document.querySelectorAll('.mm-link').forEach(a=>{
+    a.addEventListener('click',()=>{
+      hbtn.classList.remove('open');
+      mMenu.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  });
 
   // ── Stories carousel
   const tr=document.getElementById('sTrack');
