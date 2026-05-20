@@ -132,7 +132,7 @@ nav.lb .ncta:hover{background:rgba(114,104,95,.08)!important}
 .why-head{margin-bottom:3.5rem}
 .why-head h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,4.2rem);font-weight:400;line-height:1.05;margin-bottom:1rem}
 .why-head h2 em{font-style:italic;opacity:.58}
-.why-head p{color:rgba(246,244,240,.55);font-size:.9rem;line-height:1.9;max-width:440px}
+.why-head p{color:rgba(246,244,240,.85);font-size:.9rem;line-height:1.9;max-width:440px}
 
 
 
@@ -143,7 +143,7 @@ nav.lb .ncta:hover{background:rgba(114,104,95,.08)!important}
 .wcard:hover{border-color:var(--bb-md);transform:translateY(-5px)}
 .wcard-icon{font-size:1rem;margin-bottom:1.1rem;opacity:.42}
 .wcard h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;margin-bottom:.5rem}
-.wcard p{font-size:.77rem;color:rgba(246,244,240,.5);line-height:1.82}
+.wcard p{font-size:.77rem;color:rgba(246,244,240,.82);line-height:1.82}
 
 /* ── EXPERIENCES (BEI) ── */
 .exp{padding:7rem 3.5rem}
@@ -304,6 +304,10 @@ nav.lb .lang-toggle:hover{background:rgba(114,104,95,.08)}
 .scard blockquote{word-break:break-word;overflow-wrap:break-word;}
 .scard{word-break:break-word;}
 
+
+.insta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+.ighandle strong{font-weight:400;color:var(--brn)}
+
 </style>
 </head>
 <body>
@@ -435,6 +439,7 @@ nav.lb .lang-toggle:hover{background:rgba(114,104,95,.08)}
       <div class="scard"><div class="sstars">★★★★★</div><blockquote id="s4-q">"The venue — a gorgeous place. Very well organised. I really appreciated the great communication through the WhatsApp group."</blockquote><div class="sauthor"><div class="sav">★</div><div class="sinfo"><p id="s4-name">Community member</p><span id="s4-evt">Pilates Class &amp; Wine</span></div></div></div>
       <div class="scard"><div class="sstars">★★★★★</div><blockquote id="s5-q">"I was really happy — I had guidance that allowed me to follow the class even as a complete beginner. I felt totally supported throughout."</blockquote><div class="sauthor"><div class="sav">★</div><div class="sinfo"><p id="s5-name">Community member</p><span id="s5-evt">Pilates Class &amp; Wine</span></div></div></div>
       <div class="scard"><div class="sstars">★★★★★</div><blockquote id="s6-q">"I loved the event — especially that it was on a Sunday with brunch. The venue and the atmosphere were incredible. 1000/10."</blockquote><div class="sauthor"><div class="sav">★</div><div class="sinfo"><p id="s6-name">Community member</p><span id="s6-evt">Yoga Class &amp; Brunch</span></div></div></div>
+      <div class="scard"><div class="sstars">★★★★★</div><blockquote id="s7-q">"Loved this yoga + brunch plan. Such a fun and relaxing morning, the class was amazing and the brunch after was 10/10. Everything felt super cute and easygoing. Need another one soon 🤍"</blockquote><div class="sauthor"><div class="sav">M</div><div class="sinfo"><p id="s7-name">Maria Daniela</p><span id="s7-evt">Yoga Class &amp; Brunch</span></div></div></div>
       <!-- duplicate for loop -->
       <div class="scard"><div class="sstars">★★★★★</div><blockquote>"Both events I've been to with them have been amazing. They take care of every detail, make you feel special, and create a space not just for sport, but for connecting with people who are like you. I'll definitely keep being part of this community! Thank you Pao and Bea."</blockquote><div class="sauthor"><div class="sav">E</div><div class="sinfo"><p>Estefanía A.</p><span>Yoga Class &amp; Brunch · Pilates Class &amp; Wine</span></div></div></div>
       <div class="scard"><div class="sstars">★★★★★</div><blockquote>"Thank you for organising it! I loved the whole plan — the class, the activity and the brunch with waffles that I wanted to eat all of! Can't wait for the next events!"</blockquote><div class="sauthor"><div class="sav">H</div><div class="sinfo"><p>Heliette</p><span>Yoga Class &amp; Brunch</span></div></div></div>
@@ -442,6 +447,7 @@ nav.lb .lang-toggle:hover{background:rgba(114,104,95,.08)}
       <div class="scard"><div class="sstars">★★★★★</div><blockquote>"The venue — a gorgeous place. Very well organised. I really appreciated the great communication through the WhatsApp group."</blockquote><div class="sauthor"><div class="sav">★</div><div class="sinfo"><p>Community member</p><span>Pilates Class &amp; Wine</span></div></div></div>
       <div class="scard"><div class="sstars">★★★★★</div><blockquote>"I was really happy — I had guidance that allowed me to follow the class even as a complete beginner. I felt totally supported throughout."</blockquote><div class="sauthor"><div class="sav">★</div><div class="sinfo"><p>Community member</p><span>Pilates Class &amp; Wine</span></div></div></div>
       <div class="scard"><div class="sstars">★★★★★</div><blockquote>"I loved the event — especially that it was on a Sunday with brunch. The venue and the atmosphere were incredible. 1000/10."</blockquote><div class="sauthor"><div class="sav">★</div><div class="sinfo"><p>Community member</p><span>Yoga Class &amp; Brunch</span></div></div></div>
+      <div class="scard"><div class="sstars">★★★★★</div><blockquote>"Loved this yoga + brunch plan. Such a fun and relaxing morning, the class was amazing and the brunch after was 10/10. Everything felt super cute and easygoing. Need another one soon 🤍"</blockquote><div class="sauthor"><div class="sav">M</div><div class="sinfo"><p>Maria Daniela</p><span>Yoga Class &amp; Brunch</span></div></div></div>
     </div>
   </div>
 </section>
@@ -474,8 +480,11 @@ nav.lb .lang-toggle:hover{background:rgba(114,104,95,.08)}
 <section class="insta sbei" id="instagram" data-theme="light">
   <p class="lbl lbl-l rev" style="justify-content:center" id="insta-lbl">Follow Along</p>
   <h2 class="rev d1" id="insta-h2"><em>Find us on Instagram</em></h2>
-  <p class="ighandle rev d2">@wellandwild__</p>
-  <a class="bpb rev d3" href="https://instagram.com/wellandwild__" target="_blank" id="btn-ig">Follow Us on Instagram</a>
+  <p class="ighandle rev d2" id="insta-sub">Find us on Instagram <strong>@wellandwild__</strong> and TikTok <strong>@wellandwild__</strong></p>
+  <div class="insta-btns rev d3">
+    <a class="bpb" href="https://instagram.com/wellandwild__" target="_blank" id="btn-ig">Follow Us on Instagram</a>
+    <a class="bgb" href="https://www.tiktok.com/@wellandwild__?_r=1&_t=ZN-96W2krTXgus" target="_blank" id="btn-tt">Follow Us on TikTok</a>
+  </div>
 </section>
 
 <!-- ═══ FOOTER — dark (BRN) ═══ -->
@@ -613,8 +622,10 @@ nav.lb .lang-toggle:hover{background:rgba(114,104,95,.08)}
       'btn-book': 'Book Now',
       // INSTAGRAM
       'insta-lbl': 'Follow Along',
-      'insta-h2': "<em>Find us on Instagram</em>",
+      'insta-h2': "<em>Find us on Instagram &amp; TikTok</em>",
       'btn-ig': 'Follow Us on Instagram',
+    'insta-sub': 'Find us on Instagram <strong>@wellandwild__</strong> and TikTok <strong>@wellandwild__</strong>',
+    'btn-tt': 'Follow Us on TikTok',
       // FOOTER
       'footer-copy': 'Movement &nbsp;&middot;&nbsp; Community &nbsp;&middot;&nbsp; Experience',
       'footer-exp': 'Experiences',
@@ -670,6 +681,9 @@ nav.lb .lang-toggle:hover{background:rgba(114,104,95,.08)}
     's6-q': "Me encantó el evento y especialmente que sea un domingo con brunch. El lugar y el ambiente fueron increíbles. 1000/10.",
     's6-name': 'Miembro de la comunidad',
     's6-evt': 'Yoga Class &amp; Brunch',
+    's7-q': "Me encantó este plan de yoga + brunch. Ha sido una mañana muy divertida y relajante, la clase fue increíble y el brunch después un 10/10. Todo parecía muy lindo y tranquilo. Necesito otro pronto! 🤍",
+    's7-name': 'Maria Daniela',
+    's7-evt': 'Yoga Class &amp; Brunch',
       'why-c1-h': 'Una comunidad de la que querrás formar parte',
       'why-c1-p': 'Cada evento está diseñado para que conozcas personas inspiradoras, te sientas como en casa y salgas con mucho más que un buen entrenamiento.',
       'why-c2-h': 'Enfoque personal',
@@ -711,8 +725,10 @@ nav.lb .lang-toggle:hover{background:rgba(114,104,95,.08)}
       'btn-book': 'Reserva ahora',
       // INSTAGRAM
       'insta-lbl': 'Síguenos',
-      'insta-h2': "<em>Encuéntranos en Instagram</em>",
+      'insta-h2': "<em>Encuéntranos en Instagram y TikTok</em>",
       'btn-ig': 'Síguenos en Instagram',
+    'insta-sub': 'Encuéntranos en Instagram <strong>@wellandwild__</strong> y en TikTok <strong>@wellandwild__</strong>',
+    'btn-tt': 'Síguenos en TikTok',
       // FOOTER
       'footer-copy': 'Movimiento &nbsp;&middot;&nbsp; Comunidad &nbsp;&middot;&nbsp; Experiencia',
       'footer-exp': 'Experiencias',
@@ -793,6 +809,8 @@ nav.lb .lang-toggle:hover{background:rgba(114,104,95,.08)}
     set('s5-name', t['s5-name']); set('s5-evt', t['s5-evt']);
     set('s6-q', '\"' + t['s6-q'] + '\"');
     set('s6-name', t['s6-name']); set('s6-evt', t['s6-evt']);
+    set('s7-q', '\"' + t['s7-q'] + '\"');
+    set('s7-name', t['s7-name']); set('s7-evt', t['s7-evt']);
 
     // STORIES
     set('stories-lbl', t['stories-lbl']);
@@ -814,7 +832,9 @@ nav.lb .lang-toggle:hover{background:rgba(114,104,95,.08)}
     // INSTAGRAM
     set('insta-lbl', t['insta-lbl']);
     set('insta-h2', t['insta-h2']);
+    set('insta-sub', t['insta-sub']);
     set('btn-ig', t['btn-ig']);
+    set('btn-tt', t['btn-tt']);
 
     // FOOTER
     set('footer-copy', t['footer-copy']);
